@@ -47,6 +47,7 @@ function runSortOnce(iteration) {
     console.log("no more iterations");
     return true;
   }
+// This causes the iterative sort function to be set to what the button was set.  See earlier lines
   var outarr = itersortfunc(arr, iteration);
   var newRow = document.createElement("tr");
   newRow.className = "attempt";

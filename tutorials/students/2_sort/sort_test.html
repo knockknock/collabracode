@@ -20,7 +20,18 @@
         return [104, 17, 9, 15, 24, 73, 105, 87, 47, 42, 1];
       }
       function testValidBubbleSort() {
-        // TODO fill in test
+            var iterations = [
+              [1, 42, 73, 104, 24, 15, 105, 17, 87, 47, 9],
+              [1, 104, 105, 9, 15, 17, 24, 42, 47, 73, 87],
+              [1, 9, 15, 17, 24, 42, 47, 73, 87, 104, 105]
+            ];
+            var arr = generateStandardArray();
+            for(var i=0, iterationsSize=iterations.length; i<iterationsSize; i++) {
+              var iteration = iterations[i];
+              arr = itersort_bubblesort(arr, i);
+              assertArrayEquals(iteration, arr);
+            }
+          }
       }
       function testValidInsertionSort() {
         // TODO fill in test

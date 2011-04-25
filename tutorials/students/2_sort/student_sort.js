@@ -1,7 +1,16 @@
 function itersort_bubblesort(arr, iteration) {
   // TODO fill in body
-  arr = duplicateArray(arr);
-  return arr;
+	var arrSize = arr.length;
+	var placehold;
+    for (var i = 0; i < arrSize-1; i++) {
+      if (arr[i] > arr[i+1]) {
+		placehold = arr[i+1];
+		arr[i+1] = arr[i];
+		arr[i] = placehold;
+		}
+    }
+  	arr = duplicateArray(arr);
+  	return arr;
 }
 
 function itersort_insertionsort(arr, iteration) {
